@@ -1,0 +1,13 @@
+<app-cabecera></app-cabecera>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="formu" (ngSubmit)="submit()">
+  <ion-input type="text" placeholder="nombre"
+  [formControl] ="formu.controls.nombre"></ion-input>
+  <ion-input type="text" placeholder="telefono"
+  [formControl] ="formu.controls.telefono"></ion-input>
+ <ion-button type="submit" expand="block" fill="clear" shape="round">
+  Enviar
+ </ion-button>
+</form>
+</ion-content>

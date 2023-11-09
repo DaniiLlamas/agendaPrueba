@@ -1,21 +1,21 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { HomePage } from './home.page';
-
-import { HomePageRoutingModule } from './home-routing.module';
 import { ComponentsModule } from '../components/components.module';
+import { IonicModule } from '@ionic/angular';
 
+import { BuscarPageRoutingModule } from './buscar-routing.module';
+
+import { BuscarPage } from './buscar.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    HomePageRoutingModule,
+    BuscarPageRoutingModule,
     ComponentsModule
   ],
-  declarations: [HomePage]
+  declarations: [BuscarPage]
 })
-export class HomePageModule {}
+export class BuscarPageModule {}

@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'anadir',
+    loadChildren: () => import('./anadir/anadir.module').then( m => m.AnadirPageModule)
+  },
+  {
+    path: 'borrar',
+    loadChildren: () => import('./borrar/borrar.module').then( m => m.BorrarPageModule)
+  },
+  {
+    path: 'buscar',
+    loadChildren: () => import('./buscar/buscar.module').then( m => m.BuscarPageModule)
+  },
+  {
+    path: 'detalle/:id',
+    loadChildren: () => import('./detalle/detalle.module').then( m => m.DetallePageModule)
+  },
 ];
 
 @NgModule({

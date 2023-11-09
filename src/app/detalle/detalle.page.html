@@ -1,0 +1,21 @@
+<ion-content [fullscreen]="true">
+  <app-cabecera></app-cabecera>
+  <ion-card>
+  <ion-card-header>
+    Este es el contacto de {{contactoRecibido.nombre}}
+  </ion-card-header>
+  <ion-card-content>
+    <ion-item>
+      <ion-label position="floating">Nombre</ion-label>
+      <ion-input [(ngModel)]="contactoRecibido.nombre" type="text"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Teléfono</ion-label>
+      <ion-input [(ngModel)]="contactoRecibido.telefono" type="text"></ion-input>
+    </ion-item>
+  </ion-card-content>
+</ion-card>
+
+<ion-button (click)="borrarContacto()"> Borrar </ion-button>        
+<ion-button (click)="guardarContacto()"> Editar </ion-button>
+</ion-content>

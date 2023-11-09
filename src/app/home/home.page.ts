@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ContactoService } from '../services/contacto.service';
+
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,13 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  lista:any;
+  mostrandoListaCompleta:boolean = false;
+
+  constructor(servcont : ContactoService) {
+    this.lista = servcont.getAll()
+  }
+
+
 
 }
